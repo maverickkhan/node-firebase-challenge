@@ -3,7 +3,6 @@ const router=express.Router()
 var admin = require("firebase-admin");
 router.post('/sign',async(req,res)=>{
     try{const user = await admin.auth().getUserByEmail(req.body.user.email)
-      console.log(user);
         try {const token =await admin.auth().createCustomToken(req.body.user.email)
           res.json({token})} catch(e){
             console.log(e)
