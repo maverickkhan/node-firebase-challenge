@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "928b8f0a-e9fb-4760-9610-693a599b73d0",
+		"name": "code-minimalist-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": {\r\n        \"email\": \"abdulhai2@gmail.com\",\r\n        \"phone\": \"+923048121241\",\r\n        \"name\": \"Abdul Hai\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": {\r\n        \"email\": \"abdulhai2@gmail.com\"\r\n    }\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/sign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImlhdCI6MTY1MTc3OTY5MywiZXhwIjoxNjUxNzgzMjkzLCJpc3MiOiJmaXJlYmFzZS1hZG1pbnNkay1lNGx5dUBuZXN0anNhdXRoLTMxYzRmLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwic3ViIjoiZmlyZWJhc2UtYWRtaW5zZGstZTRseXVAbmVzdGpzYXV0aC0zMWM0Zi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInVpZCI6ImFiZHVsaGFpMkBnbWFpbC5jb20ifQ.sbQYiHjNIP8iXoDJlwu9IbWXXUgPzxcbdxxX9LbsG684y5FNqF-YyQeeqwf4XQhndTJaGB9L6h3F8dE5oIP0JS6BtZwF6iwgmrww_XqOJVSteSlh6vdHpzaz50VTuDolhBmEpoiJdmzeS8BYOXnDTwGMsjdMKTXyWSvYq5-HAr_lu9_8ICPExRcxTz3EbbYl1yPmJ61hUn6lFZAs2-NKVTy8HQbBDC_8HzC6LbB-g-NVkfXfu_C9bW_c5x99xJ2VU0yA9WTgAHuXMaYWrsE_zYBrEus18b3P6R0o4I7MGlMpJaj1wBEN8BLt24XpMkLVy5uH2R6mFw-ERWpkERjXFg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Name Search",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImlhdCI6MTY1MTc3OTY5MywiZXhwIjoxNjUxNzgzMjkzLCJpc3MiOiJmaXJlYmFzZS1hZG1pbnNkay1lNGx5dUBuZXN0anNhdXRoLTMxYzRmLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwic3ViIjoiZmlyZWJhc2UtYWRtaW5zZGstZTRseXVAbmVzdGpzYXV0aC0zMWM0Zi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInVpZCI6ImFiZHVsaGFpMkBnbWFpbC5jb20ifQ.sbQYiHjNIP8iXoDJlwu9IbWXXUgPzxcbdxxX9LbsG684y5FNqF-YyQeeqwf4XQhndTJaGB9L6h3F8dE5oIP0JS6BtZwF6iwgmrww_XqOJVSteSlh6vdHpzaz50VTuDolhBmEpoiJdmzeS8BYOXnDTwGMsjdMKTXyWSvYq5-HAr_lu9_8ICPExRcxTz3EbbYl1yPmJ61hUn6lFZAs2-NKVTy8HQbBDC_8HzC6LbB-g-NVkfXfu_C9bW_c5x99xJ2VU0yA9WTgAHuXMaYWrsE_zYBrEus18b3P6R0o4I7MGlMpJaj1wBEN8BLt24XpMkLVy5uH2R6mFw-ERWpkERjXFg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/name-check/A",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"name-check",
+						"A"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
